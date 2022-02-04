@@ -5,7 +5,7 @@ from ynab_import.swedbank.providers import SwedbankCSVReader
 
 
 def test_read_transaction_data_from_csv():
-    sw = SwedbankCSVReader(source_file_path="data/swedbank.csv")
+    sw = SwedbankCSVReader(source_file_path="tests/swedbank/swedbank.csv")
     transactions = sw.read_transactions()
     assert len(transactions) == 4
     assert transactions[0] == Transaction(
